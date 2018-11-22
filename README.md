@@ -1,7 +1,7 @@
 About r-protviz
 ===============
 
-Home: https://cran.r-project.org/web/packages/protViz/index.html
+Home: https://github.com/protViz/protViz/
 
 Package license: GPL-3
 
