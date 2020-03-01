@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: protViz_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/protViz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/protViz/protViz_{{ version }}.tar.gz
@@ -33,15 +32,13 @@ requirements:
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
-
   host:
-    - r-base
-    - r-rcpp >=0.12.8
-
+    - r-base >=3.6
+    - r-rcpp >=1.0
   run:
-    - r-base
+    - r-base >=3.6
     - {{native}}gcc-libs         # [win]
-    - r-rcpp >=0.12.8
+    - r-rcpp >=1.0
 
 test:
   commands:
@@ -61,5 +58,3 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - MathiasHaudgaard
-    - FrodePedersen
-    - ArneKr
