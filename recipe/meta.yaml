@@ -1,4 +1,4 @@
-{% set version = "0.7.3" %}
+{% set version = "0.7.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/protViz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/protViz/protViz_{{ version }}.tar.gz
-  sha256: dc923cbd46f904a736496e4552209ed7aac1c0a4adc4f1363c838388d9e7d238
+  sha256: 6121ee2915b79bbed6543b8d3fb25b9212a990819d8ec33f4bfc90ee005784a2
 
 build:
   merge_build_host: true  # [win]
   skip: true  # [r_base == "4.0"]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
