@@ -3,6 +3,7 @@ About r-protviz-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-protviz-feedstock/blob/main/LICENSE.txt)
 
+
 About r-protviz
 ---------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/protViz/protViz/
 Package license: GPL-3.0-only
 
 Summary: Helps with quality checks, visualizations  and analysis of mass spectrometry data, coming from proteomics  experiments. The package is developed, tested and used at the Functional  Genomics Center Zurich. We use this package mainly for prototyping,  teaching, and having fun with proteomics data. But it can also be  used to do data analysis for small scale data sets.
+
 About r-protviz
 ---------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
