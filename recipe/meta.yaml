@@ -1,6 +1,5 @@
 {% set version = "0.7.9" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-protviz
@@ -13,9 +12,8 @@ source:
   sha256: c7a9a1efead47140450c7cd72e1adaee1f432dee256c371dda766aa915c952f3
 
 build:
-  merge_build_host: true  # [win]
   skip: true  # [r_base == "4.0"]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,8 +22,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
+    - {{ stdlib("c") }}          # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('m2w64_cxx') }}        # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
@@ -38,7 +38,6 @@ requirements:
     - r-rcpp >=1.0
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=1.0
 
 test:
